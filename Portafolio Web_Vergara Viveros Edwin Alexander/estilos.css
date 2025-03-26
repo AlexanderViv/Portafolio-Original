@@ -1,0 +1,158 @@
+/* variables */
+:root{
+    --font-family:"Roboto", sans-serf;
+    --normal-font:400;
+    --bold-font:700;
+    --bolder-font:900;
+    --bg-color: rgb(108, 233, 25);
+    --primary-color: purple;
+    --seconday-color: orange;
+    --primary-shadow:rgb(30, 24, 24);
+}
+html{
+    scroll-behavior: smooth; /* Para ir lento a esa seccion de la pagina deseada */
+}
+body{
+    font-family: var(--font-family);
+}
+nav{
+    position: sticky; /*Para que se quede pegado el encabezado aunque se mueva, lo va acompañar*/
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3.5rem 5.5rem;
+    background-color: var(--bg-color);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+
+}
+nav h1{
+    color:var(--primary-color);
+}
+nav ul{
+    display: flex;
+    gap: 1.9rem;
+}
+/*Seccion biografia*/
+.biografia{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem; /*Separacion de la foto de perfil y biografia*/
+    max-width: 68.75rem; 
+    margin: auto;
+    padding: 30px;
+}
+.foto_perfil{
+    width: 400px;
+    height: 400px;
+    background-image: url(Foto/Edwin.jpg); /*Poner foto de perfil circular*/
+    background-size: cover;
+    border-radius: 50%;
+    border: 2px solid rgb(92, 250, 0);
+    padding: 0.5rem;
+}
+.bio{
+width: 25rem;
+padding: 0.625rem;
+border-radius: 6px;
+box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+}
+.habilidades{
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+}
+.encabezado-habilidad{
+    margin-bottom: 1rem;
+}
+.contenedor-habilidades{
+    padding: 1rem;
+}
+.icono{
+    width: 100px;
+    height: 100px;
+}
+.tarjeta-icono{
+    background-color: rgb(255, 255, 255);
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--seconday-color);
+    padding: 20px;
+    margin: 10px;
+}
+
+.proyectos{
+    background-color: var(--bg-color);
+    padding: 32px 0;
+    margin: center;
+    text-align: center;
+    margin-top: 3rem;
+}
+.titulo{
+text-align: center;
+margin-bottom: 1rem;
+
+}
+.contenedor-de-proyectos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /*contenedor del proyecto*/
+    padding: 1rem;
+}
+/*** ESTILOS BOTÓN SLIDE LEFT ***/
+.ov-btn-slide-left {
+    background: #fff; /* color de fondo */
+    color: #4741d7; /* color de fuente */
+    border: 2px solid #4741d7; /* tamaño y color de borde */
+    padding: 16px 20px;
+    border-radius: 3px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+  }
+  .ov-btn-slide-left:hover {
+    color: #fff; /* color de fuente hover */
+  }
+  .ov-btn-slide-left::after {
+    content: "";
+    background: #4741d7; /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }
+  .ov-btn-slide-left:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }    
+.sociales{     /*poner iconos del lado derecho*/
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 1%;
+    bottom:50%
+}
+.socicon{
+    width: 2rem;
+    height: 2rem;
+}
+.footer{
+    grid-area: footer;
+    background-color: antiquewhite;
+    color: rgb(30, 24, 24);
+    text-align: center;
+    padding: 2px; /*ancho de footer*/
+    width: 100%;
+}
